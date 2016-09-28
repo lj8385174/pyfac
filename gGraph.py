@@ -12,7 +12,6 @@ class gGraph(object):
         self.factNames = {}
         self.connections = []  # store connections, index is varnode's index, the values is a list of connected factor nodes
         self.factConnections =[] # store connections, index is factnodes's index, the values is a list of connected varnodes
-        pass
 
     def addVarNode(self,gvarnode):
         # Add a var node class
@@ -76,7 +75,16 @@ class gGraph(object):
         schedule =[]
         for rootConnectionsFactIndex in rootConnectionsFactIndices:
             schedule.append([rootConnectionsFactIndex,varIndex])
+        '''
+            currentNodes is a series of index-type couples represents to
+            search the connections
+            key : index 
+        '''
+        currentNodes={}
         
+
+        while True:
+
 
 
     def marginal(self,varname):
